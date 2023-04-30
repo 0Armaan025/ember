@@ -1,0 +1,14 @@
+pytube
+discord.py
+jokeapi
+gtts
+pyvirtualdisplay
+reportlab
+Pillow
+chess
+openai
+requests
+twilio
+googletrans
+dotenv
+youtube_dl
