@@ -11,4 +11,3 @@ requests
 twilio
 googletrans
 dotenv
-youtube_dl
