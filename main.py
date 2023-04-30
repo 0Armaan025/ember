@@ -448,7 +448,7 @@ async def youtubeaccess(ctx):
             data['youtube']['access'] = "false"
             await ctx.send("Settings updated successfully!")      
 
-    with open('ember/storehouse.json', 'w') as f:
+    with open('storehouse.json', 'w') as f:
         json.dump(data, f)                     
 
 
@@ -526,7 +526,7 @@ async def message_listener(message):
     if message.author == client.user:
         return
     
-    with open('ember/storehouse.json', 'r') as f:
+    with open('storehouse.json', 'r') as f:
         storehouse = json.load(f)
 
     if str(message.author.id) in storehouse:
@@ -549,7 +549,7 @@ async def message_listener(message):
         await channel.send(f"Congratulations {message.author.mention}! You leveled up to level {level}!")
 
     
-    with open('ember/storehouse.json', 'w') as f:
+    with open('storehouse.json', 'w') as f:
         json.dump(storehouse, f)
 
 
@@ -662,14 +662,14 @@ async def open_store_house(user):
         users[str(user.id)]["warnings"]=0
         users[str(user.id)]["money"] = 0   
 
-    with open("ember/storehouse.json","w") as f:
+    with open("storehouse.json","w") as f:
         json.dump(users,f)   
     return True             
 
 #======================GET STORE HOUSE DATA==============================    
 
 async def get_store_house_data():
-    with open("ember/storehouse.json","r") as f:
+    with open("storehouse.json","r") as f:
         data = json.load(f)
 
     return data   
