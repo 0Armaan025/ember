@@ -322,6 +322,21 @@ async def destroy(ctx,user: discord.Member,*,reason = None, ):
 
 myRandomNumberForGiveaway = 0
 
+# ==========================PURGE==========================
+
+
+@client.command()
+async def purge(ctx, limit: int):
+    await ctx.channel.purge(limit=limit)
+    timestamp = datetime.now()
+    time = timestamp.strftime(r"%I:%M %p")
+    em = discord.Embed(title="Purge action",
+                       description=f"Purge action taken by {ctx.author.name} at {time}")
+    em.add_field(
+        name=f"\n{limit} messages has been purged/deleted by {ctx.author}", value="")
+    await ctx.send(embed=em)
+
+
 #==========================NEW CHESS GAME==========================
 @client.command()
 async def new_chess_game(ctx):
