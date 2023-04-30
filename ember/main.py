@@ -58,7 +58,7 @@ async def hello(ctx):
 #==========================FLIP A COIN==========================
 @client.command(aliases=["flip a coin","flipcoin","flipacoin"])
 async def flip(ctx):
-    await ctx.send("Who wants HEADS and who wants TAILS? Please enter the names of the users separated by a space.")
+    await ctx.send("Who wants HEADS  ( only the best hackers can play this game )and who wants TAILS? Please enter the names of the users separated by a space.")
     msg = await client.wait_for('message', check=lambda message: message.author == ctx.author)
     heads_user_name, tails_user_name = msg.content.split()[:2]
 
