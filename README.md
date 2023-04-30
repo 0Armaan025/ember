@@ -2,6 +2,8 @@
 
 Welcome to the "EMBER" repository! This bot is designed to enhance your experience on Discord by providing a variety of fun and interactive features. The bot can be activated using the command "${commandName}" followed by specific keywords for each feature.
 
+## For more information go to website: <a href="http://emberrr.co/">Link<a/>
+
 ## Features
 
 ### Music Player
