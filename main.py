@@ -278,8 +278,7 @@ async def joke(ctx):
     if joke["type"] == "single": # Print the joke
         await ctx.send(joke['joke'])
     else:
-        print(joke["setup"])
-        print(joke["delivery"])
+        await ctx.send(joke['setup'])
 
 # ==========================MAKE IMAGE==========================
 
@@ -428,7 +427,7 @@ async def youtubeaccess(ctx):
     else:
         data['youtube'] = {}
         data['youtube']['access'] = "true"
-        status = data['youtube']['acess']
+        status = data['youtube']['access']
 
     if status == "true":
         await ctx.send("Status:- Youtube links are allowed")
